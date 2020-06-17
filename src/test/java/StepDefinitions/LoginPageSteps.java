@@ -5,7 +5,7 @@ import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
 
 public class LoginPageSteps {
-   LoginPage loginPage = new LoginPage();
+    LoginPage loginPage = new LoginPage();
 
     @Then("^I should see the login form$")
     public void iClickOnInternetBanking() {

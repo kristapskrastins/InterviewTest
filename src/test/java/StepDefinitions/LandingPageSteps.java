@@ -9,7 +9,7 @@ public class LandingPageSteps {
     LandingPage landingPage = new LandingPage();
 
     @When("^I click on log-in button$")
-    public void iClickOnLogInButton()  {
+    public void iClickOnLogInButton() {
         landingPage.clickOnLogInButton();
     }
 

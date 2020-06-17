@@ -2,4 +2,9 @@
 
 ## Used technologies
 
-Intellij IDEA, Java 8, Maven
+* Intellij IDEA
+* Java 8
+* Selenium
+* Chromedriver and geckodriver (for firefox)
+* Cucumber
+* Maven

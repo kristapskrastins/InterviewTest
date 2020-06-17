@@ -1,7 +1,7 @@
 package StepDefinitions;
 
-
 import cucumber.annotation.en.Given;
+
 import static Utils.EnvironmentFactory.driver;
 
 public class NavigationSteps {

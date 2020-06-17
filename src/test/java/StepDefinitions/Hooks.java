@@ -9,12 +9,12 @@ import cucumber.annotation.Before;
 public class Hooks {
 
     @Before()
-    public void initDriver(){
+    public void initDriver() {
         EnvironmentFactory.initDriver(PropertyManager.getInstance().getProperty("BROWSER"));
     }
 
     @After()
-    public void deInitDriver(){
+    public void deInitDriver() {
         EnvironmentFactory.deInitDriver();
     }
 

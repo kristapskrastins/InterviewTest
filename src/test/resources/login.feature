@@ -17,6 +17,6 @@ Feature: Interview test cases
       |       |
 
   @correctRegistrationNumber @positive
-  Scenario: Inputting the right amount of digits
+  Scenario: Correct registration number input
     When I input the registration number 12345678
     Then I should see personal access code form
