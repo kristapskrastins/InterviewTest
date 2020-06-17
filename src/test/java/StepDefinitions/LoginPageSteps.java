@@ -12,13 +12,18 @@ public class LoginPageSteps {
         loginPage.iShouldSeeTheLoginForm();
     }
 
-    @When("^I input the registration number \"(.*)\"$")
+    @When("^I input the registration number (.*)$")
     public void iInputTheRegistrationNumber(String number) {
         loginPage.iInputRegistrationNumber(number);
     }
 
-    @Then("^I should see the \"(.*)\" error message$")
+    @Then("^I should see the (.*) error message$")
     public void iShouldSeeTheErrorMessage(String message) {
         loginPage.iShouldSeeTheErrorWithText(message);
+    }
+
+    @Then("^I should see personal access code form$")
+    public void iShouldSeePersonalAccessCodeForm() {
+        loginPage.iShouldSeeThePersonalAccessCodeForm();
     }
 }

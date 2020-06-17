@@ -8,6 +8,7 @@ import static Utils.EnvironmentFactory.driver;
 public class LoginPage extends BasePageObject {
 
     private By loginStepOneForm = By.id("loginstep1Form");
+    private By loginPersonalAccessCodeForm = By.id("loginstep2Form");
     private By nextButton = By.id("nextButton");
     private By registrationNumberInput = By.id("regNumber_id");
     private By registrationNumberError = By.id("regNumber.errors");
@@ -25,4 +26,7 @@ public class LoginPage extends BasePageObject {
         assertEquals(driver.findElement(registrationNumberError).getText(), text);
     }
 
+    public void iShouldSeeThePersonalAccessCodeForm() {
+       assert(waitUntilVisible(loginPersonalAccessCodeForm).isDisplayed());
+    }
 }

@@ -17,7 +17,7 @@ public class EnvironmentFactory {
                 break;
             case "chrome":
                 ChromeOptions options = new ChromeOptions();
-                options.addArguments("--start-fullscreen");
+                //options.addArguments("--start-fullscreen");
                 System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver.exe");
                 driver = new ChromeDriver(options);
                 break;
