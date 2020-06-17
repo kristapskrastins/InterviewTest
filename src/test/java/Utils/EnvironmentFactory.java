@@ -2,7 +2,6 @@ package Utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class EnvironmentFactory {
@@ -16,9 +15,8 @@ public class EnvironmentFactory {
                 driver = new FirefoxDriver();
                 break;
             case "chrome":
-                ChromeOptions options = new ChromeOptions();
                 System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver.exe");
-                driver = new ChromeDriver(options);
+                driver = new ChromeDriver();
                 break;
             default:
                 throw new Error("Driver not supported");
