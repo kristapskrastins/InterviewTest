@@ -9,13 +9,14 @@ public class EnvironmentFactory {
     public static WebDriver driver;
 
     public static void initDriver(String type) {
+        String extension = System.getProperty("os.name").toLowerCase().contains("windows") ? ".exe" : "";
         switch (type.toLowerCase()) {
             case "firefox":
-                System.setProperty("webdriver.gecko.driver", "src/test/resources/Drivers/geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", "src/test/resources/Drivers/geckodriver" + extension);
                 driver = new FirefoxDriver();
                 break;
             case "chrome":
-                System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver" + extension);
                 driver = new ChromeDriver();
                 break;
             default:
